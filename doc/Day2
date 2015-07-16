@@ -1,0 +1,132 @@
+>>> num
+21
+>>> num = 0xAF
+>>> num
+175
+>>> num = 0o777
+>>> num
+511
+>>> num = 0o7
+>>> num
+7
+>>> num = 0o17
+>>> num
+15
+>>> bin(num)
+'0b1111'
+>>> oct(num)
+'017'
+>>>
+
+>>> print ord('a')
+97
+>>> print chr(65)
+A
+
+String to List
+--------------
+>>> name="Sujeeth Kumar"
+>>> arr=list(name)              #string to list
+>>> arr
+['S', 'u', 'j', 'e', 'e', 't', 'h', ' ', 'K', 'u', 'm', 'a', 'r']
+>>> type(arr)
+<type 'list'>
+>>> "".join(arr)                #list to string
+'Sujeeth Kumar'
+>>> name = str(arr)             #wrong syntax
+>>> name
+"['S', 'u', 'j', 'e', 'e', 't', 'h', ' ', 'K', 'u', 'm', 'a', 'r']"
+>>>
+
+padding:
+-------
+"=".join(arr)
+
+S=u=j=e=e=t=h= =k=u=m=a=r=
+
+
+string = "0b1111"
+num = int(string,base=2)
+
+, at end of print statement removes default\n and replaces with space char
+
+Byte Array
+----------
+arr=bytearray()
+
+- is mutable
+- one byte for each elements
+- can store only positive integer
+- elements b/w 0 to 255
+
+Deep Copy
+---------
+
+names=['arun','bob']
+temp = names #shallow copy
+temp1 = names[::] #deep copy since we are specifying part of the string which is whole string
+
+else
+import copy
+names=['arun','bob']
+temp = copy.deepcopy(names) #deep copy
+
+arr[:] = map(int,arr)  #retains the id,overwrites the value instead of creating int memory in heap
+
+
+Array multiplication:
+--------------------
+arr = [0]*10
+print arr
+[0,0,0,0,0,0,0,0,0,0]
+
+
+names=['arun','ajith','anup','amar']
+#convert to upper
+
+Syntax:
+-------
+map(<<function_name that accepts one arg and returns a value>>,<<any iterable datatype>>)
+
+map(upper,names)
+
+>>> data = ["ha","jak","12345"]
+>>> length = map(len,data)
+>>> length
+[2, 3, 5]
+>>>
+
+
+Lambda function:
+---------------
+syntax:
+lambda x,y:x+y
+
+set
+----
+
+- eliminates the duplicates
+- unorderes data structure like dict
+-       union
+        diff
+        intersection
+        issubset
+        issuperset
+
+        set(a) & set(b) #intersection
+        set(a)-set(b) - unique in a
+Nested datastructures:
+----------------
+
+a=[10,20]
+b=[30,40]
+c=[50,60]
+
+arr=[a,b,c]
+
+len(arr)=2
+arr[0] prints [10,20]
+arr[0][0] prints 10
+
+
+dict in dict is also possible
