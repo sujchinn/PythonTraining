@@ -1,0 +1,6 @@
+DVD 10
+CD 15
+MON 35
+KB 43
+CPU 12
+K 32

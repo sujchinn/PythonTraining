@@ -130,3 +130,134 @@ arr[0][0] prints 10
 
 
 dict in dict is also possible
+
+File Operations
+---------------
+
+Data persistence
+BOF-beginning of File
+EOF
+File Cursor
+Seek - randomly move the cursor
+tell - from BOF how many bytes cursor has moved
+
+types of file
+--------------
+          _______ Text mode  open modes - write(cursor at BOF)
+          |                               read(cursor at BOF)
+Files ----                                append(cursor at EOF)
+          |_______Binary Mode
+
+
+Opening a file
+--------------
+pyhton 2.7 ===> f1=file("c:\\data\\one.txt","w")
+2.7 and 3.4 ===> f1 = open("c:\\data\\one.txt","w")
+
+seek
+-----
+seek(number of bytes, from where) #0-BOF, 1 - CUR 2 - EOF
+
+tell
+----
+tell() #no.of bytes from BOF to current CUR location
+
+f1.seek(0,2)
+n=f1.tell #gives the size of the file
+
+
+Functions
+---------
+ reusable of code
+
+ > function shld be defined before its called
+ > func block is executed only when you call it
+ > func can return more than one value - TUPLE
+
+scope of variable
+-----------------
+ if a variable is defined within the func such vars are called LOCAL VARS
+
+Functions can have
+    - Positional arg
+    - Default arg
+
+Positional args
+----------------
+def add_data(code,name,dept):
+  print "code=",code
+  print "name=",name
+  print "Dept=",dept
+
+>arguments has to be same positional order
+>exact number of args
+
+Default args
+-------------
+def add_data(code=0,name=null,dept=null):
+  print "code=",code
+  print "name=",name
+  print "Dept=",dept
+
+  add_date(name='arun')
+
+>default values has to be from right to left
+>default arg cannot be in the middle
+
+Rules:
+
+Keyword arg must be followed by keyword only
+Default values should be an immutable object
+
+
+Libraries
+---------
+
+
+Symbol table
+ in C, there is a centralized symbol table
+ in python it is decentralized
+
+Namespaces/Package - Symbol table in python,java
+
+Two types of Lib
+ - class lib
+ - procedural libs
+
+Procedural libs
+----------------
+myfunc.py
+----------
+__version__ = 1.0
+__author__ = 'ssujchinn'
+#__all__ = ['fun','foo','baaz','hai','person']
+
+person='Hari'
+def func():
+    print "hello from",__name__
+
+def foo():
+    print "hai from foo"
+
+def baaz():
+    print "I'm in baaz"
+def hai():
+    print "Hello World!"
+
+
+funccall
+--------
+import myfunc
+myfunc.foo()
+
+or
+
+import myfunc as f
+f.foo()
+
+or
+
+from mufunc import *
+
+foo()
+

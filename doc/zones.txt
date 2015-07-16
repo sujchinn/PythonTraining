@@ -1,0 +1,4 @@
+south,hyd chn bgl tvm sec,10 20 30 40
+ north,del jai bho gur,10 43 23 54
+ east,odi dar kol, 10 32 45 23
+ west,ahm mum goa cha pun kola,32 65 34 67
