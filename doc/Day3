@@ -1,0 +1,101 @@
+Custom Sort
+---------
+studs=["arun-cse-85",
+        "arun-ece-85",
+        "mani-ise-90",
+        "manu-mech-20"
+        ]
+
+studs.sort(key=lambda x: int(x.split('-')[-1]))
+
+this is an inplace sorting
+
+temp = sorted(studs,key=lambda x: int(x.split('-')[-1]),reverse=True)
+
+here sorted arr is copied to another loxaton and named temp
+studs is preserved
+
+call by reference:
+
+In python, all the functions are call by reference
+
+only in list, call by value is possible as shown below
+
+fun(arr[:])
+
+in case of integer/float/string/tuple, even call by refrerence does change the original value bacuse int is immutable.
+
+
+Global Variable
+----------------
+
+in order to declare a global variable in a function use keyword "global"
+
+any variable in main program is global
+
+Variable arguments:
+-------------------
+
+def func(*arr):
+    print arr
+
+func()
+func(10)
+func(10,20,30)
+
+
+arr in the function func will be a tuple
+
+variable keyword/default arg
+-----------------------------
+
+def func(**arr):
+    print arr
+
+func(name='john',age=24,state='TN',marks=[10, 20,30])
+
+
+Importing a lib
+---------------
+
+> import myfunc
+> import myfunc as f
+>from myfunc import *
+>from myfunc import fun,foo
+>from myfunc import fun as f, foo as ff
+
+import works if lib exist in sys.path
+
+inorder to include lib path
+
+sys.path.append(....) ----> this is only for that session
+
+permanent path setting
+------------------------
+
+path=c:\Python27 -> to add python as recognized command
+set pythonpath = c:\.....
+ in MS-DOS
+
+
+modules
+-------
+    Collection of Packages/Libraries
+
+
+mobiles
+|__sony.py
+|__nokia.py
+
+
+import mobiles  ---> this will fail as the interpreter will look for mobiles.py
+
+python has a special script in each package __init__.py which is called if we try to import a folder
+so import all the py files inside this special script
+
+import mobiles.sony -->even here init.py is mandatory
+
+
+
+
+
